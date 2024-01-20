@@ -1,0 +1,70 @@
+#include <iostream>
+
+using namespace std;
+const double phi = 3.14;
+
+double hitungLuaslingkaran(double r) {
+    double L = phi * (r * r);
+    return L;
+}
+
+double hitungLuassegitiga(double alas, double tinggi) {
+    double L = 0.5 * alas * tinggi;  // rumus luas segitiga
+    return L;
+}
+
+double hitungLuasbujursangkar(double s) {
+    double L = s * s;
+    return L;
+}
+
+double hitungLuaspersegipanjang(double p, double l) {
+    double L = p * l;
+    return L;
+}
+
+void tampilkanLuaslingkaran(double r) {
+    double L = hitungLuaslingkaran(r);
+    cout << "Luas lingkaran : " << L << endl;
+}
+
+void tampilkanLuassegitiga(double alas, double tinggi) {
+    double L = hitungLuassegitiga(alas, tinggi);
+    cout << "Luas segitiga : " << L << endl;
+}
+
+void tampilkanLuasbujursangkar(double s) {
+    double L = hitungLuasbujursangkar(s);
+    cout << "Luas bujursangkar : " << L << endl;
+}
+
+void tampilkanLuaspersegipanjang(double p, double l) {
+    double L = hitungLuaspersegipanjang(p, l);
+    cout << "Luas persegi panjang : " << L << endl;
+}
+
+int main() {
+    double r, alas, tinggi, s, p, l;
+
+    cout << "Masukkan r : ";
+    cin >> r;
+    tampilkanLuaslingkaran(r);
+
+    cout << "Masukkan alas : ";
+    cin >> alas;
+    cout << "Masukkan tinggi : ";
+    cin >> tinggi;
+    tampilkanLuassegitiga(alas, tinggi);
+
+    cout << "Masukkan s : ";
+    cin >> s;
+    tampilkanLuasbujursangkar(s);
+
+    cout << "Masukkan p : ";
+    cin >> p;
+    cout << "Masukkan l : ";
+    cin >> l;
+    tampilkanLuaspersegipanjang(p, l);
+
+    return 0;
+}
